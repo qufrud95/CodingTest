@@ -10,7 +10,7 @@ def solution(priorities, location):
     while len(d):
         item = d.popleft()
         print("item : ",item)
-        print(d)
+        print("d : ",)
         if  d and max(d)[0]> item[0]:
             print("max  : ",max(d)[0])
             d.append(item)
