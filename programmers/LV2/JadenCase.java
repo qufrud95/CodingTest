@@ -4,16 +4,18 @@ public class JadenCase {
     public static String solution(String s){
         
         String answer="";
-        String[] sp = s.toLowerCase().split("");
-        boolean flag =true;
-
-        for(String ss : sp){
-
-            answer+= flag? ss.toUpperCase() : ss; // true이면 대문자로 아니면 소문자로 대입
-            flag = ss.equals(" ")?true:false; //공백이면 true 아니면 false 즉 공백이 시작되는것은 문자열의 첫번째이기 때문
+        s = s.toLowerCase();
+        answer += Character.toUpperCase(s.charAt(0));
+        for (int i=1; i<s.length(); i++){
+            if(s.charAt(i)==' '){
+                answer+=" ";
+            }else if(s.charAt(i-1)==' '){
+                answer+=Character.toUpperCase(s.charAt(i));
+            }else{
+                answer+=s.charAt(i);
+            }
         }
-
-        System.out.println(answer);
+        //System.out.println(answer);
            
       
         return answer ; 

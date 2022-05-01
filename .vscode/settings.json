@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
         "programmers/Stack,Queue",
-        "programmers/LV2"
+        "programmers/LV2",
+        "programmers/정렬/DFS/BFS"
     ]
 }
